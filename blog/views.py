@@ -92,7 +92,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 #loginreq and userpasses test have to be left of deleteview
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
-    success_url = '/blog/'
+    success_url = '/'
 
     def test_func(self):
         post = self.get_object()
